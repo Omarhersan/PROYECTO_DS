@@ -3,6 +3,9 @@
 
 #Git
 .git
+.idea
+
+
 
 # Jupyter
-.ipynb_checkpointss
+.ipynb_checkpoints
