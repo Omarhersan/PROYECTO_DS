@@ -1,0 +1,8 @@
+# Enviroments
+.env
+
+#Git
+.git
+
+# Jupyter
+.ipynb_checkpointss
