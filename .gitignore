@@ -1,0 +1,11 @@
+# Enviroments
+.env
+
+#Git
+.git
+.idea
+
+
+
+# Jupyter
+Construction_DS/.ipynb_checkpoints
