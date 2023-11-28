@@ -3,7 +3,7 @@ FROM python:3.10-slim-buster
 LABEL authors="kaleb.avila, omar.hernandez, axel.jaramillo"
 
 # Set the working directory inside the container
-workdir = ./app
+WORKDIR /app
 
 # Install necessary packages and configure timezone
 RUN apt-get update && apt-get install -y procps && pip install -U pip \
@@ -24,11 +24,11 @@ RUN apt-get update --yes && \
 
 
 # Copy the requirements file into the container and install dependencies
-COPY ./requirements.txt /app/requirements.txt
-RUN pip install -r /app/requirements.txt
+COPY ./requirements.txt /requirements.txt
+RUN pip install -r /requirements.txt
 
-COPY ./main.py /app/main.py
-COPY ./best.pt /app/best.pt
+COPY ./main.py /main.py
+COPY ./best.pt /best.pt
 
 # Expose port 8000
 EXPOSE 8000
