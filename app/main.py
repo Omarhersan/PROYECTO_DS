@@ -5,7 +5,6 @@ from fastapi.exceptions import HTTPException
 import os
 import shutil
 from PIL import Image
-from pydantic import BaseModel
 
 # Loading model and initializing the fastapi app
 model = YOLO('best.pt')
@@ -62,7 +61,7 @@ async def get_prediction(filename: str):
 
 
 if __name__ == '__main__':
-    uvicorn.run('main:app',host="0.0.0.0", port = 5000, log_level = "info", reload = False)
+    uvicorn.run('main:app',host="0.0.0.0", port = 8000, log_level = "info", reload = False)
 
 
 
