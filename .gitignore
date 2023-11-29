@@ -1,6 +1,10 @@
 # Enviroments
 .env
 
+#keys
+app/Key_equipo_1.pem
+
+
 #Git
 .git
 .idea
