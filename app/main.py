@@ -7,6 +7,7 @@ import shutil
 from PIL import Image
 
 # Loading model and initializing the fastapi app
+
 model = YOLO('best.pt')
 app = FastAPI()
 

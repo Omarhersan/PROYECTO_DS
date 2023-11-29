@@ -3,3 +3,4 @@ Pillow==10.1.0
 pydantic==2.5.2
 ultralytics==8.0.219
 uvicorn==0.24.0.post1
+python-multipart

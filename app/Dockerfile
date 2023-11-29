@@ -21,17 +21,19 @@ RUN apt-get update --yes && \
     python3-dev \
     gcc && \
     apt-get clean && rm -rf /var/lib/apt/lists/*
-
+RUN apt-get update
+RUN apt-get install ffmpeg libsm6 libxext6  -y
 
 # Copy the requirements file into the container and install dependencies
-COPY ./requirements.txt app/requirements.txt
-RUN pip install -r app/requirements.txt
+COPY ./requirements.txt ./requirements.txt
+RUN pip install -r ./requirements.txt
 
-COPY ./main.py app/main.py
-COPY ./best.pt app/best.pt
+COPY ./main.py ./main.py
+COPY ./best.pt ./best.pt
+
+
 
 # Expose port 8000
 EXPOSE 8000
-
 # Set the command to run FastAPI using uvicorn
 CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
