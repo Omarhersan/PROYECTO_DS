@@ -24,11 +24,11 @@ RUN apt-get update --yes && \
 
 
 # Copy the requirements file into the container and install dependencies
-COPY ./requirements.txt /requirements.txt
-RUN pip install -r /requirements.txt
+COPY ./requirements.txt app/requirements.txt
+RUN pip install -r app/requirements.txt
 
-COPY ./main.py /main.py
-COPY ./best.pt /best.pt
+COPY ./main.py app/main.py
+COPY ./best.pt app/best.pt
 
 # Expose port 8000
 EXPOSE 8000

@@ -6,7 +6,8 @@
 .idea
 
 
-
+#Key
+/app/Key_equipo_1.pem
 # Jupyter
 Construction_DS/.ipynb_checkpoints
 /data
